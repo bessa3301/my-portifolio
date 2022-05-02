@@ -21,7 +21,7 @@
                                         </a>
                                     </h3>
                                     <p class="mt-1 text-sm text-gray-500">
-                                        5/5
+                                        {{ $stack->expertise }}
                                     </p>
                                 </div>
                             </div>

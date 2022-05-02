@@ -29,11 +29,11 @@ class TechStackResource extends Resource
                 TextInput::make('name')->required(),
                 FileUpload::make('file_path')->label('Icon')->image()->required(),
                 Select::make('expertise')->options([
-                    'Beginner - 1/5',
-                    'Intermediate - 2/5',
-                    'Advanced - 3/5',
-                    'Experienced - 4/5',
-                    'Expert - 5/5',
+                    'Beginner - 1/5' => '1',
+                    'Intermediate - 2/5' => '2',
+                    'Advanced - 3/5' => '3',
+                    'Experienced - 4/5' => '4',
+                    'Expert - 5/5' => '5',
                 ])->required(),
                 RichEditor::make('description')->required()
             ]);
