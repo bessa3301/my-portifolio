@@ -1,3 +1,3 @@
 <x-layout>
-    {{ $stacks }}
+    404 Not found
 </x-layout>
