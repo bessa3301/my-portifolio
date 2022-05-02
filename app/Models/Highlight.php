@@ -12,6 +12,7 @@ class Highlight extends Model
         'is_show',
         'title',
         'content',
+        'banner_path',
     ];
 
     protected $casts = [

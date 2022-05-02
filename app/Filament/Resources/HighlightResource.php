@@ -6,6 +6,7 @@ use App\Filament\Resources\HighlightResource\Pages;
 use App\Filament\Resources\HighlightResource\RelationManagers;
 use App\Models\Highlight;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -28,6 +29,7 @@ class HighlightResource extends Resource
                 Toggle::make('is_show')->label('Display on website'),
                 TextInput::make('title')->required(),
                 RichEditor::make('content')->required(),
+                FileUpload::make('banner_path')->image()->required(),
             ]);
     }
 
