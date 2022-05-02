@@ -897,6 +897,9 @@ select {
 .rounded-2xl {
   border-radius: 1rem;
 }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .rounded-l-3xl {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -1558,6 +1561,14 @@ select {
 
   .lg\:h-80 {
     height: 20rem;
+  }
+
+  .lg\:h-60 {
+    height: 15rem;
+  }
+
+  .lg\:h-72 {
+    height: 18rem;
   }
 
   .lg\:w-1\/2 {
