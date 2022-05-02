@@ -10,7 +10,7 @@ class HighlightController extends Controller
     public function index()
     {
         $highlights = Highlight::query()
-            ->select('id', 'content', 'title')
+            ->select('id', 'content', 'title', 'banner_path')
             ->where('is_show', true)
             ->orderBy('created_at')
             ->get();
