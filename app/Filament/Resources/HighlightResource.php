@@ -26,8 +26,8 @@ class HighlightResource extends Resource
         return $form
             ->schema([
                 Toggle::make('is_show')->label('Display on website'),
-                TextInput::make('title'),
-                RichEditor::make('content'),
+                TextInput::make('title')->required(),
+                RichEditor::make('content')->required(),
             ]);
     }
 

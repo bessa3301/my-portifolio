@@ -10,7 +10,8 @@ class HighlightController extends Controller
     public function index()
     {
         $highlights = Highlight::query()
-            ->select('is_show', 'content', 'title')
+            ->select('id', 'content', 'title')
+            ->where('is_show', true)
             ->orderBy('created_at')
             ->get();
 
@@ -19,6 +20,12 @@ class HighlightController extends Controller
 
     public function show($id)
     {
-        //
+        $highl = Highlight::find($id);
+
+        if (!$highl) {
+            return abort(404);
+        }
+
+        return view('highlights.show', ['hishlight' => $highl]);
     }
 }
