@@ -6,23 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
-        //
+        Schema::table('tech_stacks', function (Blueprint $table) {
+            $table->string('expertise')->nullable();
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        Schema::table('tech_stacks', function (Blueprint $table) {
+            $table->dropIfExists('expertise');
+        });
     }
 };

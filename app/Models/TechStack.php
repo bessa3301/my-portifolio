@@ -12,5 +12,6 @@ class TechStack extends Model
         'name',
         'description',
         'file_path',
+        'expertise',
     ];
 }
