@@ -18,15 +18,14 @@
                 @foreach ($highlights as $high)
                     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="{{ asset('storage/' . $high->banner_path) }}"
-                                alt="">
+                            <img class="h-48 w-full object-cover" src="{{ asset('storage/' . $high->banner_path) }}">
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
                                 <p class="text-sm font-medium text-indigo-600">
-                                    <a href="#" class="hover:underline"> Read More </a>
+                                    <a href="/highlights/{{ $high->id }}" class="hover:underline"> Read More </a>
                                 </p>
-                                <a href="#" class="block mt-2">
+                                <a href="/highlights/{{ $high->id }}" class="block mt-2">
                                     <p class="text-xl font-semibold text-gray-900"> {{ $high->title }} </p>
                                 </a>
                             </div>
