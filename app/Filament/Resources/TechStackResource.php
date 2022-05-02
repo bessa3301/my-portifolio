@@ -8,6 +8,7 @@ use App\Models\TechStack;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -27,6 +28,13 @@ class TechStackResource extends Resource
             ->schema([
                 TextInput::make('name')->required(),
                 FileUpload::make('file_path')->label('Icon')->image()->required(),
+                Select::make('expertise')->options([
+                    'Beginner - 1/5',
+                    'Intermediate - 2/5',
+                    'Advanced - 3/5',
+                    'Experienced - 4/5',
+                    'Expert - 5/5',
+                ])->required(),
                 RichEditor::make('description')->required()
             ]);
     }
