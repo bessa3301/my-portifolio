@@ -21,7 +21,7 @@ class TechStackController extends Controller
         $stack = TechStack::find($id);
 
         if (!$stack) {
-            return view('error.not-found');
+            return abort(404);
         }
 
         return view('tech-stack.show');
