@@ -10,7 +10,9 @@ class TechStackController extends Controller
 
     public function index()
     {
-        $stacks = TechStack::all();
+        $stacks = TechStack::query()
+            ->select('id', 'name', 'description', 'file_path', 'expertise')
+            ->get();
         return view('tech-stack.index', ['stacks' => $stacks]);
     }
 
