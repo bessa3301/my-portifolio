@@ -11,9 +11,7 @@ class TechStackController extends Controller
     public function index()
     {
         $stacks = TechStack::all();
-        return view('tech-stack.index', [
-            'stacks' => $stacks
-        ]);
+        return view('tech-stack.index', ['stacks' => $stacks]);
     }
 
     public function show($id)
@@ -24,6 +22,6 @@ class TechStackController extends Controller
             return abort(404);
         }
 
-        return view('tech-stack.show');
+        return view('tech-stack.show', ['stack' => $stack]);
     }
 }
