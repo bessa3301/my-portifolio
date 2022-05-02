@@ -25,9 +25,9 @@ class TechStackResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
-                FileUpload::make('file_path')->label('Icon')->image(),
-                RichEditor::make('description')
+                TextInput::make('name')->required(),
+                FileUpload::make('file_path')->label('Icon')->image()->required(),
+                RichEditor::make('description')->required()
             ]);
     }
 
